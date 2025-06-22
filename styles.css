@@ -1,0 +1,200 @@
+/* ===== Variables ===== */
+:root {
+  /* Light Mode Colors */
+  --light-bg: #f8f9fa;
+  --light-text: #212529;
+  --light-primary: #310dfd;
+  --light-secondary: #6c757d;
+  --light-card-bg: #ffffff;
+  --light-border: #dee2e6;
+
+  /* Dark Mode Colors */
+  --dark-bg: #121212;
+  --dark-text: #f8f9fa;
+  --dark-primary: #6a5acd;
+  --dark-secondary: #adb5bd;
+  --dark-card-bg: #1e1e1e;
+  --dark-border: #343a40;
+
+  /* Common Colors */
+  --accent-color: #ff6b6b;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+
+  /* Fonts */
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+
+  /* Spacing */
+  --section-padding: 100px 0;
+  --container-width: 1200px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--dark-bg);
+  transition: var(--transition-normal);
+  overflow-x: hidden;
+}
+
+body[data-bs-theme="light"] {
+  color: var(--light-text);
+  background-color: var(--light-bg);
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-secondary);
+    font-weight:600;
+    line-height:1.2;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+    transition:var(--transition-fast);
+}
+
+a:hover {
+    color: var(--dark-primary);
+}
+
+body[data-bs-theme="light"] a:hover {
+    color: var(--light-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width:var(--container-width);
+    margin:0 auto;
+    padding:0 20px;
+}
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  transition: var(--transition-normal);
+}
+
+body[data-bs-theme="light"] header {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.navbar {
+    padding:15px 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items:center;
+    font-weight:700;
+    font-size: 1.5rem;
+}
+
+.brand-text {
+    background: linear-gradient(to right, var(--dark-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body[data-bs-theme="light"] .brand-text {
+    background: linear-gradient(to right, var(--light-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.nav-link {
+    padding: 10px 15px !important;
+    font-weight: 500;
+    position:relative;
+    margin:0 5px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--dark-primary);
+    transition: var(--transition-normal);
+}
+body[data-bs-theme="light"] .nav-link::after {
+    background-color: var(--light-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 70%;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--dark-text);
+}
+
+body[data-bs-theme="light"] .navbar-toggler {
+    color: var(--light-text);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+Particle Background Styles
+#particle-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+body[data-bs-theme="light"] #particles-js {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2, #e6e9f0);
+}
+
