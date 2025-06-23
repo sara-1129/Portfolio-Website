@@ -83,3 +83,26 @@ $(document).ready(function () {
     }
 
 });
+
+//Smooth scrolling for anchor links
+    $(document).ready(function(){
+    $('a[href^="#"]').on('click',function(event){
+        event.preventDefault();
+        const targetId = $(this).attr('href');  
+        if(targetId === '#') return;
+        const targetElement = $(targetId);
+        if(targetElement.length) {  
+            window.scrollTo({
+                top: targetElement.offset().top - 80,  
+                behavior: 'smooth'
+            });
+        }
+
+        // Close mobile menu if open
+        const navbarCollapse = $('.navbar-collapse');
+        if(navbarCollapse.hasClass('show')) {
+            navbarCollapse.collapse('hide');
+        }
+    });
+});
+

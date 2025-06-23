@@ -103,6 +103,92 @@ ul {
     margin:0 auto;
     padding:0 20px;
 }
+.section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--dark-primary), var(--accent-color));
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+body[data-bs-theme="light"] .section-divider {
+    background: linear-gradient(to right, var(--light-primary), var(--accent-color));
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--dark-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+body[data-bs-theme="light"] .section-subtitle {
+    color: var(--light-secondary);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: var(--transition-normal);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--dark-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #5a4ab5;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline-secondary {
+    border: 1px solid var(--dark-secondary);
+    color: var(--dark-text);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--dark-primary);
+    border-color: var(--dark-primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+body[data-bs-theme="light"] .btn-outline-secondary {
+    border: 1px solid var(--light-secondary);
+    color: var(--light-text);
+}
+
+body[data-bs-theme="light"] .btn-outline-secondary:hover {
+    background-color: var(--light-primary);
+    border-color: var(--light-primary);
+    color: white;
+}
 /* Header styles */
 header {
   position: fixed;
@@ -183,7 +269,130 @@ body[data-bs-theme="light"] .navbar-toggler {
     box-shadow: none;
 }
 
-Particle Background Styles
+
+
+/* ==Hero Section== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top:100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.greeting {
+  display: block;
+  font: size 1.5rem;
+  font-weight: 400;
+  color:var(--dark-secondary);
+  margin-bottom: 0.5rem;
+}
+
+body[data-bs-theme="light"] .greeting {
+    color: var(--light-secondary);
+}
+
+.name {
+  background: linear-gradient(to right, var(--dark-primary), var(--accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:transparent;
+  display: inline-block;
+}
+
+body[data-bs-theme="light"] .name {
+  background: linear-gradient(to right, var(--light-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.hero-subtitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: var(--dark-secondary);
+}
+
+body[data-bs-theme="light"] .hero-subtitle {
+    color: var(--light-secondary);
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+.hero-image {
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--shadow-xl);
+}
+
+.hero-image-border{
+    position: absolute;
+     top: -20px;
+     right: -20px;
+    bottom: -20px;
+    left: -20px;
+    border: 2px solid var(--dark-primary);
+    border-radius: 30px;
+    z-index: 1;
+    opacity: 0.5; 
+    
+    
+}
+
+.tech-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.tech-icons i {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--dark-primary);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateX(-10px) translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Particle Background Styles */
 #particle-js {
   position: fixed;
   width: 100%;
