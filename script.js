@@ -63,7 +63,7 @@ $(document).ready(function () {
     $('body').attr('data-bs-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-
+    //update the theme
     themeToggle.on('click', function () {
         const currentTheme = body.attr('data-bs-theme');
         const newTheme = (currentTheme === 'dark') ? 'light' : 'dark';
@@ -192,3 +192,136 @@ $(document).ready(function() {
   setTimeout(typeWriter, 1000);
 });
 
+
+
+
+//Back to Top Button
+$(document).ready(function() {
+    const backToTop = $('#backToTop');
+    
+    // Show/hide button on scroll
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            backToTop.addClass('active');
+        } else {
+            backToTop.removeClass('active');
+        }
+    });
+    
+    // Smooth scroll to top
+    backToTop.on('click', function(e) {
+        e.preventDefault(); // Prevent default anchor behavior
+        $('html, body').animate({ scrollTop: 0 }, 'smooth');
+    });
+});
+
+
+//Animation for progress bars
+$(document).ready(function() {
+    const progressBars = $('.progress-bar');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const targetWidth = $(bar).attr('data-width');
+                $(bar).css('width', targetWidth + '%');
+                observer.unobserve(bar);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    
+    progressBars.each(function() {
+        observer.observe(this);
+    });
+});
+
+// Contact form 
+$(document).ready(function(){
+    const contactForm = $('#contactForm');
+    contactForm.on('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const formData = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val()
+        };
+        
+        // Validate form data
+        if (!formData.name || !formData.email || !formData.message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+        
+        
+        console.log('Form submitted:', formData);
+        
+        // Show success message
+        alert('Thank you for your message!');
+        
+        // Reset the form
+        contactForm[0].reset();
+    });
+});
+
+//Animate element on scroll
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        const elements = $('.skill-card, .project-card, .fact-item, .hobby-item');
+        elements.each(function() {
+            const elementPosition = $(this).offset().top;
+            const scrollPosition = $(window).scrollTop();
+            const windowHeight = $(window).height();
+            
+            if (elementPosition < scrollPosition + windowHeight - 100) {
+                $(this).addClass('animate__animated animate__fadeInUp');
+            }
+        });
+    });
+    
+    // Trigger the scroll event once on page load to check initial positions
+    $(window).trigger('scroll');
+});
+
+
+//Project filter functionality
+
+$(document).ready(function() {
+    const $filterButtons = $('.filter-btn');
+    const $projectItems = $('.project-item');
+
+    $filterButtons.on('click', function() {
+        // Update active button
+        $filterButtons.removeClass('active');
+        $(this).addClass('active');
+
+        const filterValue = $(this).data('filter');
+
+        // Filter projects
+        $projectItems.each(function() {
+            const $item = $(this);
+            if (filterValue === 'all' || $item.data('category').includes(filterValue)) {
+                $item.css('display', 'block');
+            } else {
+                $item.css('display', 'none');
+            }
+        });
+    });
+});
+
+
+// Initialize Bootstrap tooltips
+$(document).ready(function() {
+    $('[data-bs-toggle="tooltip"]').tooltip();
+});
+
+
+//Update the current year in the footer
+$(document).ready(function() {
+    const currentYear = new Date().getFullYear();
+    $('#currentYear').text(currentYear);
+});

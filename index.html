@@ -11,15 +11,14 @@
     <meta name="author" content="Sara">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <title>Sara | Aspiring Software Engineer</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Main CSS -->
@@ -28,7 +27,8 @@
 
 <body data-bs-theme="dark">
     <!-- Particle background effects -->
-    <!-- <div id="particles-js"></div> -->
+    <div id="particles-js"></div>
+    
     <!-- Header Section-->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg">
@@ -74,7 +74,8 @@
                             <span class="name">Sara</span>
                         </h1>
                         <div class="typewriter animate__animated animate__fadeIn animate__delay-1s">
-                            <h2> <i class="far fa-star star" style="color: gold;"></i> <span class="hero-subtitle">Frontend Developer</span></h2>
+                            <h2> <i class="far fa-star star" style="color: gold;"></i> <span
+                                    class="hero-subtitle">Frontend Developer</span></h2>
                         </div>
                         <p class="hero-text animate__animated animate__fadeIn animate__delay-1-5s">
                             Crafting beautiful, functional web experiences with a focus on clean code and intuitive
@@ -101,16 +102,672 @@
             </div>
         </section>
         <!-- About Section -->
-         <section id="about" class="section about-section">
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
 
-         </section>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <h3 class="about-subtitle">Curious Coder & Creative Problem Solver</h3>
+                            <p>I'm a frontend developer in training with a dual focus: mastering Data Structures and
+                                Algorithms with C++ while simultaneously building my frontend development skills through
+                                hands-on projects.</p>
+                            <p>My approach combines analytical thinking with creative problem-solving, allowing me to
+                                create solutions that are both technically sound and visually appealing.</p>
+                            <p>When I'm not coding, you'll find me contributing to open-source projects, writing
+                                technical blogs, or exploring the beautiful landscapes of Himachal Pradesh.</p>
+
+                            <div class="about-facts mt-4">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <span class="fact-number">10+</span>
+                                        <span class="fact-label">Projects Completed</span>
+                                    </div>
+                                </div>
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="fact-text">
+                                        <span class="fact-number">1</span>
+                                        <span class="fact-label">Year of Experience</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-tabs">
+                            <ul class="nav nav-pills mb-3" id="about-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="education-tab" data-bs-toggle="pill"
+                                        data-bs-target="#education" type="button">
+                                        <i class="fas fa-graduation-cap me-2"></i>Education
+                                    </button>
+                                </li>
+                                <!-- <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="experience-tab" data-bs-toggle="pill"
+                                        data-bs-target="#experience" type="button">
+                                        <i class="fas fa-briefcase me-2"></i>Experience
+                                    </button>
+                                </li> -->
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="hobbies-tab" data-bs-toggle="pill"
+                                        data-bs-target="#hobbies" type="button">
+                                        <i class="fas fa-heart me-2"></i>Hobbies
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="about-tabContent">
+                                <div class="tab-pane fade show active" id="education" role="tabpanel">
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <h4>B.Tech in Mathematics & Scientific Computing</h4>
+                                            <h5>NIT Hamirpur (2023-2027)</h5>
+                                            <p>Currently pursuing my degree with a focus on computational mathematics
+                                                and its applications in software development.</p>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <h4>Frontend Development</h4>
+                                            <h5>Self-Taught (2023-Present)</h5>
+                                            <p>Completed numerous online courses and built multiple projects to master
+                                                modern frontend technologies.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="tab-pane fade" id="experience" role="tabpanel">
+                                    <div class="timeline">
+                                        <div class="timeline-item">
+                                            <h4>Freelance Developer</h4>
+                                            <h5>2023-Present</h5>
+                                            <p>Building websites and web applications for clients while continuously
+                                                improving my skills.</p>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <h4>Open Source Contributor</h4>
+                                            <h5>2023-Present</h5>
+                                            <p>Contributing to various open-source projects to gain real-world
+                                                development experience.</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="tab-pane fade" id="hobbies" role="tabpanel">
+                                    <div class="hobbies-grid">
+                                        <div class="hobby-item">
+                                            <i class="fas fa-book"></i>
+                                            <span>Writing</span>
+                                        </div>
+                                        <div class="hobby-item">
+                                            <i class="fas fa-hiking"></i>
+                                            <span>Gym</span>
+                                        </div>
+                                        <div class="hobby-item">
+                                            <i class="fas fa-music"></i>
+                                            <span>Dance</span>
+                                        </div>
+                                        <div class="hobby-item">
+                                            <i class="fas fa-pencil-alt"></i>
+                                            <span>Sketching</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">The tools and technologies I use to bring ideas to life</p>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-tabs">
+                        <ul class="nav nav-pills mb-4" id="skills-tab" role="tablist">
+                            
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="backend-tab" data-bs-toggle="pill"
+                                    data-bs-target="#web-development" type="button">
+                                    <i class="fas fa-server me-2"></i>Web Development
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link " id="frontend-tab" data-bs-toggle="pill"
+                                    data-bs-target="#programming" type="button">
+                                    <i class="fas fa-laptop-code me-2"></i>Programming Languages
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tools-tab" data-bs-toggle="pill" data-bs-target="#tools"
+                                    type="button">
+                                    <i class="fas fa-tools me-2"></i>Tools
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="skills-tabContent">
+                        <div class="tab-pane fade show active" id="web-development" role="tabpanel">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
+                                        <h4>HTML5</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 95"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-css3-alt"></i>
+                                        </div>
+                                        <h4>CSS3</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-js"></i>
+                                        </div>
+                                        <h4>JavaScript</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-bootstrap"></i>
+                                        </div>
+                                        <h4>Bootstrap</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-react"></i>
+                                        </div>
+                                        <h4>React</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 70"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-node-js"></i>
+                                        </div>
+                                        <h4>Node.js</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 65"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-database"></i>
+                                        </div>
+                                        <h4>SQL</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 70"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="programming" role="tabpanel">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-js"></i>
+                                        </div>
+                                        <h4>JavaScript</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                        <h4>C++</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tools" role="tabpanel">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-git-alt"></i>
+                                        </div>
+                                        <h4>Git</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 85"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fab fa-github"></i>
+                                        </div>
+                                        <h4>GitHub</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 90"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-terminal"></i>
+                                        </div>
+                                        <h4>CLI</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                            <i class="fas fa-code"></i>
+                                        </div>
+                                        <h4>VS Code</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 95"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <div class="skill-card">
+                                        <div class="skill-icon">
+                                           <i class="fa fa-caret-up"></i>
+                                        </div>
+                                        <h4>Vercel</h4>
+                                        <div class="skill-progress">
+                                            <div class="progress-bar" data-width=" 75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="soft-skills mt-5">
+                    <h3 class="text-center mb-4">Soft Skills</h3>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Communication</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-people-group"></i>
+                            <span>Teamwork</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Time Management</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-arrows-rotate"></i>
+                            <span>Adaptability</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-chess-king"></i>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Projects Section -->
+         <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">A showcase of my best work and creative solutions</p>
+                </div>
+
+                <div class="projects-filter mb-5">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="frontend">Frontend</button>
+                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    <!-- <button class="filter-btn" data-filter="react">React</button> -->
+                </div>
+
+                <div class="row g-4 projects-grid">
+                    <!-- Tic-Tac-Toe -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="frontend,javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/tic-tac-toe.png" alt="Tic-Tac-Toe Game">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://sara-1129.github.io/Tic-Tac-Toe/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/Tic-Tac-Toe" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Tic-Tac-Toe Game</h3>
+                                <p class="project-description">Interactive game with player vs computer mode featuring
+                                    animated winning combinations.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rock Paper Scissors -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="frontend,javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/rock-paper-scissors.png" alt="Rock Paper Scissors">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://sara-1129.github.io/Rock-paper-scissor/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/Rock-paper-scissor" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Rock Paper Scissors</h3>
+                                <p class="project-description">Interactive game with computer opponent featuring
+                                    real-time score tracking.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elite Health -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="frontend">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/elitehealth.png" alt="Elite Health">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://sara-1129.github.io/electroelites/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/electroelites" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Elite Health</h3>
+                                <p class="project-description">Remote healthcare platform developed for SPEC NITH
+                                    Electrothon 6.0 competition.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drum Kit -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/drumkit.png" alt="Drum Kit">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://sara-1129.github.io/Drum-Kit/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/Drum-Kit" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Drum Kit</h3>
+                                <p class="project-description">Interactive drum kit that plays sounds when keys are
+                                    pressed or buttons are clicked.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Simon Game -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/simon-game.png" alt="Simon Game">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://sara-1129.github.io/Simon-Game/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/Simon-Game" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Simon Game</h3>
+                                <p class="project-description">Memory game where players repeat increasingly complex
+                                    sequences of colors and sounds.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JQuery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Website -->
+                    <div class="col-12 col-md-6 col-lg-4 project-item" data-category="frontend,javascript">
+                        <div class="project-card">
+                            <div class="project-image">
+                                <img src="assets/projects/portfolio.png" alt="Portfolio Website">
+                                <div class="project-overlay">
+                                    <div class="project-links">
+                                        <a href="https://my-portfolio-seven-black-87.vercel.app/" target="_blank"
+                                            class="btn btn-primary btn-sm">
+                                            <i class="fas fa-eye me-1"></i> View Live
+                                        </a>
+                                        <a href="https://github.com/sara-1129/My-Portfolio" target="_blank"
+                                            class="btn btn-outline-light btn-sm ms-2">
+                                            <i class="fab fa-github me-1"></i> Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3 class="project-title">Portfolio Website</h3>
+                                <p class="project-description">My personal portfolio showcasing skills, projects, and
+                                    professional journey.</p>
+                                <div class="project-tech">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JQuery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Contact Section -->
+         <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Have a project in mind or want to collaborate? I'd love to hear from
+                        you!</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <form id="contactForm" class="contact-form">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-info">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Mandi, Himachal Pradesh, India</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>sarasaini3116@gmail.com</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="social-links mt-4">
+                            <a href="https://github.com/sara-1129" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/sara-37009a290/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" target="mailto:sarasaini3116@gmail.com" class="social-link">
+                                <i class="fab fa-comments"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Footer Section -->
-    <!-- Back to top button -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/favicon.svg" alt="Sara's Logo" height="40" class="me-2">
+                    <span>Sara</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/sara-1129" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sara-37009a290/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:sarasaini3116@gmail.com" target="_blank"><i class="fab fa-message"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Sara . All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
+    <!-- Back to top button -->
+        <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
     <!-- particle.js -->
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Bootstrap -->
