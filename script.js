@@ -106,3 +106,89 @@ $(document).ready(function () {
     });
 });
 
+
+//Adding animation to hero section element
+$(document).ready(function(){
+    const heroTitle = $('.hero-title')
+const heroSubtitle = $('.hero-subtitle');
+const heroText = $('.hero-text');
+const heroButtons = $('.hero-buttons');
+
+if(heroTitle) {
+    setTimeout(function() {
+        heroTitle.addClass('animate_animated', 'animate_fadeInDown');
+    }, 300);
+}
+ if (heroSubtitle) {
+        setTimeout(() => {
+            heroSubtitle.classList.add('animate__animated', 'animate__fadeIn');
+        }, 800);
+    }
+
+    if (heroText) {
+        setTimeout(() => {
+            heroText.classList.add('animate__animated', 'animate__fadeIn');
+        }, 1300);
+    }
+
+    if (heroButtons) {
+        setTimeout(() => {
+            heroButtons.classList.add('animate__animated', 'animate__fadeIn');
+        }, 1800);
+    }
+});
+
+
+//typewriter effect for hero subtitle
+$(document).ready(function() {
+  const $textElement = $('.hero-subtitle');
+  const titles = [
+    "Frontend Developer",
+    "DSA Enthusiast", 
+    "Problem Solver",
+    "Aspiring Software Engineer"
+  ];
+  
+  let titleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 150;
+  const deleteSpeed = 50;
+  const pauseBetween = 1000;
+  
+  function typeWriter() {
+    const currentTitle = titles[titleIndex];
+    
+    if (isDeleting) {
+      // Deleting phase
+      $textElement.text(currentTitle.substring(0, charIndex - 1));
+      charIndex--;
+    } else {
+      // Typing phase
+      $textElement.text(currentTitle.substring(0, charIndex + 1));
+      charIndex++;
+    }
+    
+    // Determine speed
+    let speed = isDeleting ? deleteSpeed : typingSpeed;
+    
+    // Check if current title is complete
+    if (!isDeleting && charIndex === currentTitle.length) {
+      // Pause at end of typing
+      speed = pauseBetween;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      // Switch to next title after deleting
+      isDeleting = false;
+      titleIndex = (titleIndex + 1) % titles.length;
+      // Short pause before typing next title
+      speed = 400;
+    }
+    
+    setTimeout(typeWriter, speed);
+  }
+  
+  // Start the typewriter effect after a short delay
+  setTimeout(typeWriter, 1000);
+});
+

@@ -281,6 +281,12 @@ body[data-bs-theme="light"] .navbar-toggler {
   overflow: hidden;
 }
 
+i:hover {
+    transform:scale(1.2);
+    box-shadow:0 0 50px rgba(174, 172, 18, 0.5);
+    transition: transform 0.3s ease; 
+}
+
 .hero-title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -406,4 +412,7 @@ body[data-bs-theme="light"] .hero-subtitle {
 body[data-bs-theme="light"] #particles-js {
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2, #e6e9f0);
 }
+
+
+/* === About Section === */
 
