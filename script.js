@@ -75,10 +75,10 @@ $(document).ready(function () {
     function updateThemeIcon(theme) {
         const icon = themeToggle.find('i');
         if (theme === 'dark') {
-            icon.removeClass('fa-sun').addClass('fa-moon');
+            icon.removeClass('fa-moon').addClass('fa-sun');
         }
         else {
-            icon.removeClass('fa-moon').addClass('fa-sun');
+            icon.removeClass('fa-sun').addClass('fa-moon');
         }
     }
 
